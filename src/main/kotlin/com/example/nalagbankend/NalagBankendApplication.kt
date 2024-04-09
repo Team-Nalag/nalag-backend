@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class NalagBankendApplication
 
 fun main(args: Array<String>) {
-    runApplication<NalagBankendApplication>(*args)
+	runApplication<NalagBankendApplication>(*args)
 }
