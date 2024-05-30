@@ -33,6 +33,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.4")
 	runtimeOnly("com.mysql:mysql-connector-j")
 }
 
