@@ -1,7 +1,8 @@
 package com.example.nalagbankend.global.error.exception
+
 enum class ErrorCode(
-        val status: Int,
-        val message: String
+    val status: Int,
+    val message: String
 ) {
     FEIGN_BAD_REQUEST(400, "Feign Bad Request"),
 
