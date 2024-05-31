@@ -5,6 +5,7 @@ enum class ErrorCode(
     val message: String
 ) {
     FEIGN_BAD_REQUEST(400, "Feign Bad Request"),
+    BAD_FILE_EXTENSION(400,"File Bad Extension"),
 
     FEIGN_UNAUTHORIZED(401, "Feign Unauthorized"),
     TOKEN_EXPIRED(401, "Token Expired"),
