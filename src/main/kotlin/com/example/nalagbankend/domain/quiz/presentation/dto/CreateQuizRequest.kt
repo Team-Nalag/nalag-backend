@@ -1,13 +1,16 @@
 package com.example.nalagbankend.domain.quiz.presentation.dto
 
+import javax.validation.constraints.NotBlank
+import javax.validation.constraints.Size
+
 data class CreateQuizRequest(
+    @field:NotBlank(message = "title는 Null, 공백, 띄어쓰기를 허용하지 않습니다.")
+    @field:Size(max = 30, message = "title는 30자 이하여야 합니다.")
     val title: String,
-    val choiceContent1: String,
-    val choiceContent2: String,
-    val choiceContent3: String,
-    val choiceContent4: String,
-    val choicePhoto1: String,
-    val choicePhoto2: String,
-    val choicePhoto3: String,
-    val choicePhoto4: String,
+    val choice: List<ChoiceElement>
+)
+
+data class ChoiceElement(
+    val content: String,
+    val photo: String
 )

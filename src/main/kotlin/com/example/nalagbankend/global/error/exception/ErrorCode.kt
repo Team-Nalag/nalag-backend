@@ -6,6 +6,7 @@ enum class ErrorCode(
 ) {
     FEIGN_BAD_REQUEST(400, "Feign Bad Request"),
     BAD_FILE_EXTENSION(400,"File Bad Extension"),
+    SIZE_BAD_REQUEST(400, "Size Bad Request"),
 
     FEIGN_UNAUTHORIZED(401, "Feign Unauthorized"),
     TOKEN_EXPIRED(401, "Token Expired"),
