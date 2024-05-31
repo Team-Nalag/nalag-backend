@@ -34,6 +34,9 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.4")
+	implementation("io.jsonwebtoken:jjwt:0.9.0")
+	implementation("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
+	implementation("io.github.openfeign:feign-httpclient:11.9.1")
 	runtimeOnly("com.mysql:mysql-connector-j")
 }
 

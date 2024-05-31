@@ -7,10 +7,14 @@ enum class ErrorCode(
     FEIGN_BAD_REQUEST(400, "Feign Bad Request"),
 
     FEIGN_UNAUTHORIZED(401, "Feign Unauthorized"),
+    TOKEN_EXPIRED(401, "Token Expired"),
+    TOKEN_INVALID(401, "Token Invalid"),
 
     FEIGN_FORBIDDEN(403, "Feign Forbidden"),
 
     FEIGN_TOKEN_EXPIRED(419, "Feign Token Expired"),
+
+    USER_NOT_FOUND(404, "User Not Found"),
 
     INTERNAL_SERVER_ERROR(500, "Internal Server Error");
 }
