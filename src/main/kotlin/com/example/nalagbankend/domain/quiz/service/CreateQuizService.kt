@@ -5,12 +5,14 @@ import com.example.nalagbankend.domain.quiz.domain.repository.QuizRepository
 import com.example.nalagbankend.domain.quiz.presentation.dto.CreateQuizRequest
 import com.example.nalagbankend.domain.user.facade.UserFacade
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class CreateQuizService(
     private val userFacade: UserFacade,
     private val quizRepository: QuizRepository
 ) {
+    @Transactional
     fun execute(request: CreateQuizRequest) {
         val user = userFacade.getCurrentUser()
         quizRepository.save(
