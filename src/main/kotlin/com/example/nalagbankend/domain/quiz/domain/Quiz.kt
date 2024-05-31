@@ -10,23 +10,23 @@ import javax.persistence.ManyToOne
 
 @Entity(name = "tbl_quiz")
 class Quiz(
-    @Column(columnDefinition = "CHAR(60)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(60)", nullable = false)
     val title: String,
-    @Column(columnDefinition = "CHAR(60)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(60)", nullable = false)
     val choiceContent1: String,
-    @Column(columnDefinition = "CHAR(60)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(60)", nullable = false)
     val choiceContent2: String,
-    @Column(columnDefinition = "CHAR(60)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(60)", nullable = false)
     val choiceContent3: String,
-    @Column(columnDefinition = "CHAR(60)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(60)", nullable = false)
     val choiceContent4: String,
-    @Column(columnDefinition = "CHAR(2000)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(2000)", nullable = false)
     val choicePhoto1: String,
-    @Column(columnDefinition = "CHAR(2000)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(2000)", nullable = false)
     val choicePhoto2: String,
-    @Column(columnDefinition = "CHAR(2000)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(2000)", nullable = false)
     val choicePhoto3: String,
-    @Column(columnDefinition = "CHAR(2000)", nullable = false)
+    @Column(columnDefinition = "VARCHAR(2000)", nullable = false)
     val choicePhoto4: String,
 
     user: User

@@ -1,5 +1,6 @@
 package com.example.nalagbankend.global.security
 
+import com.example.nalagbankend.global.security.jwt.JwtTokenProvider
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.context.annotation.Bean
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
@@ -11,7 +12,8 @@ import org.springframework.security.web.SecurityFilterChain
 
 @EnableWebSecurity
 class SecurityConfig(
-    private val objectMapper: ObjectMapper
+    private val objectMapper: ObjectMapper,
+    private val jwtTokenProvider: JwtTokenProvider
 ) {
 
     @Bean
@@ -31,7 +33,7 @@ class SecurityConfig(
             .authorizeHttpRequests()
             .antMatchers("/**").permitAll()
             .anyRequest().permitAll()
-            .and().apply(FilterConfig(objectMapper))
+            .and().apply(FilterConfig(objectMapper, jwtTokenProvider))
             .and().build()
     }
 
