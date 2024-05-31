@@ -6,7 +6,7 @@ import com.example.nalagbankend.global.entity.BaseUUIDEntity
 import javax.persistence.Column
 import javax.persistence.Entity
 
-@Entity(name = "tbl_anser")
+@Entity(name = "tbl_answer")
 class Answer(
     @Column(columnDefinition = "CHAR(50)", nullable = false)
     val choice: String,

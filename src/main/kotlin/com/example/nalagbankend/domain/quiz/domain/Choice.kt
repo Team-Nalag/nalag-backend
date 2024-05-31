@@ -7,7 +7,7 @@ import javax.persistence.FetchType.LAZY
 import javax.persistence.JoinColumn
 import javax.persistence.ManyToOne
 
-@Entity(name = "tbl_quiz")
+@Entity(name = "tbl_choice")
 class Choice(
     @Column(columnDefinition = "VARCHAR(60)", nullable = false)
     val content: String,
