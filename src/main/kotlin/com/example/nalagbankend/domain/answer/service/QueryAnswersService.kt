@@ -18,7 +18,7 @@ class QueryAnswersService(
         val answers = answerRepository.findAllByUserNot(user)
         return QueryAnswersResponse(
             answers.map {
-                AnswersElement(it.user.name, it.quiz.title)
+                AnswersElement(it.id, it.user.name, it.quiz.title)
             }
         )
     }
