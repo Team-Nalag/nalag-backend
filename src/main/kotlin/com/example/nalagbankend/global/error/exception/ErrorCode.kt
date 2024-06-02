@@ -19,6 +19,7 @@ enum class ErrorCode(
     USER_NOT_FOUND(404, "User Not Found"),
     QUIZ_NOT_FOUND(404, "Quiz Not Found"),
     CHOICE_NOT_FOUND(404, "Choice Not Found"),
+    ANSWER_NOT_FOUND(404, "Answer Not Found"),
 
     INTERNAL_SERVER_ERROR(500, "Internal Server Error");
 }

@@ -21,12 +21,12 @@ class Answer(
         protected set
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "user_id", columnDefinition = "BINARY(16)", nullable = false)
+    @JoinColumn(name = "quiz_id", columnDefinition = "BINARY(16)", nullable = false)
     var quiz = quiz
         protected set
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "user_id", columnDefinition = "BINARY(16)", nullable = false)
+    @JoinColumn(name = "choice_id", columnDefinition = "BINARY(16)", nullable = false)
     var choice = choice
         protected set
 }
