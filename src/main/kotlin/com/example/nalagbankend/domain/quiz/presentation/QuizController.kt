@@ -35,7 +35,7 @@ class QuizController(
     }
 
     @GetMapping
-    fun queryQuiz():QueryQuizDetailResponse {
+    fun queryQuiz(): QueryQuizDetailResponse {
         return queryQuizDetailService.execute()
     }
 }

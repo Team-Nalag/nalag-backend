@@ -20,7 +20,7 @@ class CreateQuizService(
     fun execute(request: CreateQuizRequest) {
         val user = userFacade.getCurrentUser()
 
-        if(request.choice.size > 4) {
+        if (request.choice.size > 4) {
             throw SizeBadRequestException
         }
 
