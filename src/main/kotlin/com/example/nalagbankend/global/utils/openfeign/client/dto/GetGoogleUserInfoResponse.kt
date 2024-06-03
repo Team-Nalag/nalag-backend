@@ -1,4 +1,4 @@
-package com.example.nalagbankend.global.utils.openfeign.client
+package com.example.nalagbankend.global.utils.openfeign.client.dto
 
 data class GetGoogleUserInfoResponse(
     val email: String,
