@@ -18,7 +18,7 @@ class GoogleOAuthService(
 ) {
     @Transactional
     fun execute(code: String): TokenResponse {
-        val token = googleTokenFeign.getGoogleAccessToken(code).accessToken
+        val token = googleTokenFeign.getAccessToken(code).accessToken
         val googleUser = googleFeign.getGoogleUserInfo("Bearer $token")
 
         return if (userRepository.existsByEmail(googleUser.email)) {

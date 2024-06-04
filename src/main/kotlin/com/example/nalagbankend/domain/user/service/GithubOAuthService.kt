@@ -6,8 +6,6 @@ import com.example.nalagbankend.domain.user.presentation.dto.TokenResponse
 import com.example.nalagbankend.global.security.jwt.JwtTokenProvider
 import com.example.nalagbankend.global.utils.openfeign.client.GithubFeign
 import com.example.nalagbankend.global.utils.openfeign.client.GithubTokenFeign
-import com.example.nalagbankend.global.utils.openfeign.client.GoogleFeign
-import com.example.nalagbankend.global.utils.openfeign.client.GoogleTokenFeign
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
