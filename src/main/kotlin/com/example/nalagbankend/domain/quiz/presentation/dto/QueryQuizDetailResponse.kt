@@ -1,8 +1,9 @@
 package com.example.nalagbankend.domain.quiz.presentation.dto
 
-import com.example.nalagbankend.domain.quiz.domain.Choice
+import java.util.UUID
 
 data class QueryQuizDetailResponse(
     val title: String,
-    val choices: List<Choice>
+    val quizId: UUID,
+    val choices: List<ChoiceElement>
 )
