@@ -21,11 +21,11 @@ class GoogleOAuthService(
         val token = googleTokenFeign.getAccessToken(code).accessToken
         val googleUser = googleFeign.getGoogleUserInfo("Bearer $token")
 
-        return if (userRepository.existsByEmail(googleUser.email)) {
+        return if (userRepository.existsByName(googleUser.email)) {
             jwtTokenProvider.generateToken(googleUser.email)
         } else {
-            val user = userRepository.save(User(googleUser.email, googleUser.name, googleUser.picture))
-            jwtTokenProvider.generateToken(user.email)
+            val user = userRepository.save(User(googleUser.name, googleUser.picture))
+            jwtTokenProvider.generateToken(user.name)
         }
     }
 }

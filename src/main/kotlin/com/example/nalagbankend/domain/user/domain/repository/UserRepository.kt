@@ -6,6 +6,6 @@ import java.util.UUID
 import javax.validation.constraints.Email
 
 interface UserRepository: JpaRepository<User, UUID> {
-    fun findByEmail(email: String): User?
-    fun existsByEmail(email: String): Boolean
+    fun findByName(email: String): User?
+    fun existsByName(email: String): Boolean
 }

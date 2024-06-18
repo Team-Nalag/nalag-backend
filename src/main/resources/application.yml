@@ -38,6 +38,10 @@ spring:
             redirect-uri: ${GITHUB_REDIRECT_URI:nalag://}
             scope:
               - user
+              - repo
+              - members
+              - metadata
+              - admin
           google:
             client-id: ${GOOGLE_CLIENT_ID}
             client-secret: ${GOOGLE_CLIENT_SECRET}

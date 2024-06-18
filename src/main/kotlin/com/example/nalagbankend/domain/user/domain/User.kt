@@ -6,9 +6,6 @@ import javax.persistence.Entity
 
 @Entity(name = "tbl_user")
 class User(
-    @Column(columnDefinition = "CHAR(60)", nullable = false)
-    val email: String,
-
     @Column(columnDefinition = "VARCHAR(50)", nullable = false)
     val name: String,
 

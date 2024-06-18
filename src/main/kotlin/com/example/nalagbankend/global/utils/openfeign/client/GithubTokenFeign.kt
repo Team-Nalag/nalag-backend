@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 
-@FeignClient(name = "GithubTokenFeign", url = "https://github.com", configuration = [GithubRequestConfig::class])
+@FeignClient(name = "GithubTokenFeign", url = "https://github.com")
 interface GithubTokenFeign {
     @GetMapping("/login/oauth/access_token")
     fun getAccessToken(

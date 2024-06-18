@@ -24,13 +24,14 @@ class GithubOAuthService(
     @Transactional
     fun execute(code: String): TokenResponse {
         val token = githubTokenFeign.getAccessToken(clientId, clientSecret, code).accessToken
+        println(token)
         val githubUser = githubFeign.getUserInfo("Bearer $token")
 
-        return if (userRepository.existsByEmail(githubUser.email)) {
-            jwtTokenProvider.generateToken(githubUser.email)
+        return if (userRepository.existsByName(githubUser.login)) {
+            jwtTokenProvider.generateToken(githubUser.login)
         } else {
-            val user = userRepository.save(User(githubUser.email, githubUser.login, githubUser.avatarUrl))
-            jwtTokenProvider.generateToken(user.email)
+            val user = userRepository.save(User(githubUser.login, githubUser.avatarUrl))
+            jwtTokenProvider.generateToken(user.name)
         }
     }
 }
