@@ -9,5 +9,6 @@ data class QueryAnswersResponse(
 data class AnswersElement(
     val id: UUID,
     val username: String,
-    val title: String
+    val title: String,
+    val choices: List<ChoiceElement>
 )
