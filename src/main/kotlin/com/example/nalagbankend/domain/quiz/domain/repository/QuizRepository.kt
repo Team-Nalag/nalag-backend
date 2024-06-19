@@ -7,5 +7,4 @@ import java.util.UUID
 
 interface QuizRepository : JpaRepository<Quiz, UUID> {
     fun findQuizById(id: UUID): Quiz?
-    fun findAllByUserNot(user: User): List<Quiz>
 }

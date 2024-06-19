@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 import java.util.UUID
 
 interface AnswerRepository: JpaRepository<Answer, UUID> {
-    fun findAllByUserNot(user: User): List<Answer>
     fun findAnswerById(id: UUID): Answer?
     fun existsByUserAndQuiz(user: User, quiz: Quiz): Boolean
 }

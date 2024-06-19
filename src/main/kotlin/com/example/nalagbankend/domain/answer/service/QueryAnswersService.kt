@@ -15,7 +15,7 @@ class QueryAnswersService(
     @Transactional(readOnly = true)
     fun execute(): QueryAnswersResponse {
         val user = userFacade.getCurrentUser()
-        val answers = answerRepository.findAllByUserNot(user)
+        val answers = answerRepository.findAll()
         return QueryAnswersResponse(
             answers.map {
                 AnswersElement(it.id, it.user.name, it.quiz.title)

@@ -1,5 +1,6 @@
 package com.example.nalagbankend.domain.quiz.presentation.dto
 
+import java.util.UUID
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Size
 
@@ -11,6 +12,7 @@ data class CreateQuizRequest(
 )
 
 data class ChoiceElement(
+    val id: UUID,
     val content: String,
     val photo: String
 )
